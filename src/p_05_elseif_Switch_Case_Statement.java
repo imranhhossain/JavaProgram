@@ -33,5 +33,14 @@ public class p_05_elseif_Switch_Case_Statement {
             default:
                 System.out.println("Enjoy your life");
         }
+
+        //Enhanced Switch and don't need a break keyword
+
+        switch (age){
+            case 18 -> System.out.println("You are become an adult");
+            case 24 -> System.out.println("You are going to join a job");
+            case 65 -> System.out.println("You are going to get retired!");
+            default -> System.out.println("Enjoy your life");
+        }
     }
 }
