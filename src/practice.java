@@ -2,21 +2,30 @@ import java.util.Scanner;
 
 public class practice {
     public static void main(String[] args) {
-        //convert string to lowercase
-        String str = "Imran Hossain";
-        System.out.println(str.toLowerCase());
+        boolean a = true;
+        boolean b = false;
 
-        //convert string to Uppercase
-        System.out.println(str.toUpperCase());
+        // && - AND operator
+        if(a && b){
+            System.out.println("Y");
+        }
+        else {
+            System.out.println("N");
+        }
 
-        //replace space with underscore
-        String text = "   Hello   world   ";
-        System.out.println(text.replace(' ', '_'));
+        // || - OR Operator
+        if(a || b){
+            System.out.println("Y");
+        }
+        else{
+            System.out.println("N");
+        }
 
-        //replace Word
-        String letter = "Hello <|name|>, thank a lot";
-        letter = letter.replace("<|name|>", "Imran");
-        System.out.println(letter);
+        // ! -NOT operator
+
+        System.out.println(!a);
+        System.out.println(!b);
+
     }
 }
 
