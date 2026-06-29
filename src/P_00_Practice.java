@@ -68,20 +68,30 @@ public class P_00_Practice {
 //        }
 
         //program 4
-        Scanner sc = new Scanner(System.in);
-        String website = sc.nextLine();
-
-        if (website.endsWith(".org")){
-            System.out.println("This is an organizational Website");
-        }
-        else if (website.endsWith(".com")){
-            System.out.println("This is an Commercial Website");
-        }
-        else if (website.endsWith(".in")){
-            System.out.println("This is an Indian Website");
-        }
+//        Scanner sc = new Scanner(System.in);
+//        String website = sc.nextLine();
+//
+//        if (website.endsWith(".org")){
+//            System.out.println("This is an organizational Website");
+//        }
+//        else if (website.endsWith(".com")){
+//            System.out.println("This is an Commercial Website");
+//        }
+//        else if (website.endsWith(".in")){
+//            System.out.println("This is an Indian Website");
+//        }
 
         //program 5
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the year to check : ");
+        int year = sc.nextInt();
+
+        if(year%4== 0 && year%100 != 0 || year%400== 0){
+            System.out.println("Its a leap year");
+        }
+        else {
+            System.out.println("Its not leap year");
+        }
 
     }
 }
