@@ -1,4 +1,4 @@
-public class p_06_Break_and_Continue {
+public class p_07_Break_and_Continue {
     public static void main(String[] args) {
         //Break and Continue using loops
 
