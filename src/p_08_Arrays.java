@@ -27,5 +27,11 @@ public class p_08_Arrays {
         for (int i=0; i<marks.length; i++){
             System.out.printf(" marks [%d] = %d\n", i, marks[i]);
         }
+
+        //displaying arrays with for - each loop
+        for (int element: marks){
+            System.out.println(element);
+        }
+
     }
 }
