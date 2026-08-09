@@ -1,134 +1,134 @@
 import java.util.Scanner;
 
 public class P_00_Practice {
-    public static void main(String[] args) {
 
-        //practice 1
-//        float [] ary = {45.7f, 67.8f, 63.4f, 99.2f, 100.0f};
-//        float sum= 0;
-//        for (int i = 0; i<ary.length; i++){
-//            sum+=ary[i];
-//        }
-//
-//        System.out.printf("The sum is %.2f",sum);
-//
+    static void mul(int a){
+        for(int i=1; i<=10; i++){
+            System.out.printf("%d X %d = %d\n",a,i,a*i);
+        }
+    }
 
-        //practice 2
-//        float [] ary = {45.7f, 67.8f, 63.4f, 99.2f, 100.0f};
-//        boolean isInArray = false;
-//        float num = 62.4f;
-//        for (float element: ary){
-//            if(num==element){
-//                isInArray = true;
-//                break;
-//            }
-//        }
-//        if (isInArray){
-//            System.out.println("The value is present in the array");
-//        }
-//        else {
-//            System.out.println("the value is not present in the array");
-//        }
-
-
-        //practice 3
-//        float [] marks = {45.7f, 67.8f, 63.4f, 99.2f, 100.0f};
-//        float sum= 0;
-//        for (int i = 0; i<marks.length; i++){
-//            sum+=marks[i];
-//        }
-//
-//        System.out.printf("The value of average marks  is %.2f", sum/marks.length);
-
-        //practice 4 -matrix addition
-
-//        int [][]mat1 = {{1,2,3},
-//                        {4,5,6}};
-//        int [][]mat2 = {{2,4,13},
-//                        {3, 7,1}};
-//        int [][]result = {{0,0,0},
-//                          {0,0,0}};
-//
-//
-//        for (int i= 0; i<mat1.length; i++){
-//            for (int j= 0; j<mat1[i].length; j++){
-//                System.out.printf("mat1[%d][%d] + mat2[%d][%d] = %d ", i,j, i, j, mat1[i][j] + mat2[i][j]);
-//                result[i][j] = mat1[i][j] + mat2[i][j];
-//            }
-//            System.out.println();
-//        }
-//
-//        System.out.println("Final result");
-//
-//        for (int i= 0; i<mat1.length; i++){
-//            for (int j= 0; j<mat1[i].length; j++){
-//                result[i][j] = mat1[i][j] + mat2[i][j];
-//                System.out.print(result[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-
-
-        //practice 5 - reverse an array element
-//        int [] ary = {1,2,3,4,5,6};
-//        int l = ary.length;
-//        int n = Math.floorDiv(l,2);
-//        int temp;
-//
-//        for( int i =0; i<n; i++){
-//            temp = ary[i];
-//            ary[i] = ary[l-i-1];
-//            ary[l-i-1] = temp;
-//        }
-//
-//        for (int element: ary){
-//            System.out.print(" " + element);
-//        }
-
-        //practice 6 maximam element in array
-//        int [] marks = {1,78,3,4,5,6};
-//        int max =0;
-//
-//        for (int i=0; i<marks.length; i++){
-//            if(marks[i]>max){
-//                max = marks[i];
-//            }
-//        }
-//
-//        System.out.println("the value of maximum element is " + max);
-
-
-        //practice 7 minimum element in array
-//        int [] marks = {54,11,68,33,99};
-//        int min = Integer.MAX_VALUE;
-//        System.out.println(min);
-//
-//        for (int i=0; i<marks.length; i++){
-//            if(marks[i]<min){
-//                min = marks[i];
-//            }
-//        }
-//
-//        System.out.println("the value of minimum element is " + min);
-
-
-        //practice 8
-        int [] ary = {1,2,3,9,4,5,6,7};
-        boolean isSorted = true;
-
-        for (int i=0; i<ary.length-1; i++){
-            if(ary[i]>ary[i+1]){
-                isSorted = false;
-                break;
+    static void strPtrn(int a){
+        for(int i=1; i<=4; i++){
+            for(int j=1; j<=i; j++){
+                System.out.printf("*");
             }
+            System.out.println();
+        }
+    }
+
+    static int sum(int a){
+        int sum = 0;
+        for(int i=1; i<=a; i++){
+            sum += i;
+        }
+        return sum;
+    }
+
+    static int sumRec(int n){
+        if(n==1){
+            return 1;
+        }
+        return n + sumRec(n-1);
+    }
+
+    static void revPtrn(int n){
+
+        for (int i=n; i>0; i--){
+            for(int j=1; j<=i; j++){
+                System.out.printf("*");
+            }
+            System.out.println();
         }
 
-        if(isSorted){
-            System.out.println("array is sorted");
+    }
+    
+    
+    static int fib(int n){
+        if(n==1){
+            return 0;
+        }
+        else if (n==2) {
+            return 1;
         }
         else {
-            System.out.println("array is not sorted");
+            return fib(n-1)+fib(n-2);
         }
+    }
+
+    static int avg(int ...arr){
+        int sum = 0;
+        int l = arr.length;
+        for(int i=0; i<l; i++){
+            sum+=arr[i];
+            System.out.printf("The value of %d is : %d \n", i, arr[i]);
+        }
+        return sum/l;
+    }
+
+
+    static void strRec(int n){
+        if (n>0){
+            strRec(n-1);
+            for (int i=1; i<=n; i++){
+                System.out.print("*");
+            }
+                System.out.println();
+        }
+
+    }
+    
+    static float temConvert(int c){
+        float f = 0;
+        f =  (c * ((float) 9 /5)) + 32;
+        return f;
+    }
+
+
+
+    public static void main(String[] args) {
+//        Practice 1 Method of multiplication table
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter a number for a multiplication");
+//        int n = sc.nextInt();
+//
+//        mul(n);
+
+        //practice 2 -Print star pattern
+//        int n= 4;
+//        strPtrn(n);
+
+        //practice 3
+//        int n=4;
+////        sum(n);
+//        System.out.println("The Value of sum is : " +  sum(n));
+//        //another way of practice 3
+//        int c= sumRec(4);
+//        System.out.println("The Value of sum is : " +  c);
+
+
+        //practice4 reverse star pattern
+//        revPtrn(4);
+        
+        
+        //practice 5 -Fibonacci
+
+//        System.out.println("The value of fibonacci is : "+ fib(5));
+
+        //practice 5- Calculate average of pass as argument
+//        int result= avg(1,2,3,4,5);
+//
+//        System.out.println("The average value of passing argument is : " +  result);
+
+
+        //practice 6 -repeat 4 using recursion
+
+//        strRec(4);
+
+        //practice 7- convert Celsius to Fahrenheit
+
+        float result = temConvert(99);
+        System.out.println("The result is : " + result);
 
     }
 }
