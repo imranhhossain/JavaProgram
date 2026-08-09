@@ -41,6 +41,16 @@ public class p_10_Method {
     }
 
 
+    //passing multiple argument using this parameter- (int ...arr)
+    static int sum( int ...arr){
+        int result = 0;
+        for(int a: arr){
+            result += a;
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         int a,b,c;
         a= 5;
@@ -67,6 +77,11 @@ public class p_10_Method {
         foo();
         foo(5);
         foo(12, 8);
+
+
+        System.out.println("the sum of 2 and 4 is : " + sum(2,4));
+        System.out.println("the sum of 3, 2 and 4 is : " + sum(3, 2,4));
+        System.out.println("the sum of 5, 3, 2 and 4 is : " + sum(5,3, 2,4));
 
     }
 }
