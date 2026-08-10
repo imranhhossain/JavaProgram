@@ -1,4 +1,4 @@
-class MYEmployee {
+class MYEmployee1 {
     private int id;
     private String name;
 
@@ -20,7 +20,7 @@ class MYEmployee {
 
 public class p_13_access_modifier {
     public static void main(String[] args) {
-        MYEmployee emp = new MYEmployee();
+        MYEmployee1 emp = new MYEmployee1();
         emp.setName("jhon");
         emp.setId( 1 );
 
