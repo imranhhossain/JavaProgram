@@ -9,11 +9,11 @@ class Base1{
 
 class Drived1 extends Base1{
     public Drived1(){
-        super();
+        super(); //super is used to refer parents class object
         System.out.println("From Drived1");
     }
     public Drived1(int x){
-        super(x);
+        super(x); //super is used to refer parents class object
         System.out.println("From Drived1 with value of x is : " + x);
     }
     public Drived1(int x,int y){
