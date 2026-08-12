@@ -30,7 +30,7 @@ class MYEmployee {
 }
 
 
-public class P_15_Constructor {
+public class P_14_Constructor {
     public static void main(String[] args) {
 
         MYEmployee emp = new MYEmployee(4, "jack");// Argument pass by using Constructor
