@@ -22,12 +22,13 @@ public class p_33_Exception_class {
         if(a<9){
             try {
                 System.out.println("The value of a is: "+ a);
-//                throw new MyException();
-                throw new ArithmeticException("This is an Arithmetic Exception");
+                throw new MyException();
+//                throw new ArithmeticException("This is an Arithmetic Exception");
             }
             catch (Exception e){
                 System.out.println(e.toString());
                 System.out.println(e.getMessage());
+                e.printStackTrace();
             }
         }
         else{
